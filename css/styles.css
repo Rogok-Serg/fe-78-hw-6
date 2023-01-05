@@ -111,7 +111,7 @@ span {
     height: 4px;
     left: 0;
     bottom: -24px;
-    background: #404BBF;
+    background: var(--accent-color);
     border-radius: 2px;
    
     
@@ -208,10 +208,10 @@ span {
     border-radius: 4px;
     cursor: pointer;
     border: 1px solid #4D5AE5
-}
-.btn:hover,
-.btn:focus {
-    background-color: var(--accent-color);
+    }
+    .btn:hover,
+    .btn:focus {
+        background-color: var(--accent-color);
     
 }
 /* <<<<< /Герой >>>>> */
@@ -346,7 +346,7 @@ span {
 }
 .social-list-link:hover,
 .social-list-link:focus {
-    background-color: #404BBF;
+    background-color: var(--accent-color);
 }
 
 /* <<<<< /Команда >>>>> */
@@ -387,11 +387,11 @@ span {
 }
 .customers-list-link:hover .customers-list-icon,
 .customers-list-link:focus .customers-list-icon {
-    fill: #404BBF;
+    fill: var(--accent-color);
 }
 .customers-list-link:hover,
 .customers-list-link:focus {
-    border-color: #404BBF;
+    border-color: var(--accent-color);
     
 }   
 
@@ -629,7 +629,7 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 }
 .modal-close-btn:hover,
 .modal-close-btn:focus {
-    background: #404BBF;
+    background: var(--accent-color);
 }
 .modal-close-btn:hover .modal-clise-btn-icon,
 .modal-close-btn:focus .modal-clise-btn-icon {
@@ -657,10 +657,14 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
 .modal-form-input {
     width: 100%;
     height: 40px;
-    margin-bottom: 8px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 38px;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus {
+    outline: none;
+    border-color: rgba(77, 90, 229, 1);
 }
 
 .modal-form-input-desc {
@@ -675,5 +679,119 @@ box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.1
     color: #8E8F99;
     text-transform: capitalize;
 }
+.modal-form-input-wrapper {
+    position: relative;
+    margin-bottom: 8px;
+}
+.modal-form-input-icon {
+    position: absolute;
+    top: 50%;
+    left: 19px;
+    transform: translateY(-50%);
+    fill: #2E2F42;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-input:focus + .modal-form-input-icon {
+    fill: rgba(77, 90, 229, 1);
+}
+.modal-form-message {
+    width: 100%;
+    height: 117px;
+    padding: 8px 16px;
+    resize: none;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.modal-form-message:focus {
+    outline: none;
+    border-color: rgba(77, 90, 229, 1);
+}
+.modal-form-message::placeholder {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: rgba(117, 117, 117, 0.5);
+
+}
+.modal-form-check-desc {
+    display: flex;
+    align-items: center;
+    font-family: 'Roboto';
+    font-style: normal;
+    margin-bottom: 24px;
+    margin-top: 20px;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #757575;
+
+}
+.modal-form-check-desc-link {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #4d5ae5;    
+}
+.modal-form-check-desc::before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #2E2F42;
+    border-radius: 2px;
+    content: "";
+    margin-right: 8px;
+}
+.modal-form-check {
+    position: absolute;
+    width: 0;
+    height: 0;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    
+}
+.modal-form-check:checked + .modal-form-check-desc::before {
+    background-image: url(../images/for-sprite/vector.svg);
+    background-repeat: no-repeat;
+    background-position: 50% 50%;
+    cursor: pointer;
+}
+.modal-form-check:focus + .modal-form-check-desc::before {
+    background-color: var(--accent-color);
+    
+}
+.modal-form-submit {
+    
+    align-self: center;
+    width: 169px;
+    height: 56px;
+    padding-top: 16px;
+    padding-bottom: 16px;
+    padding-left: 32px;
+    padding-right: 32px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #4D5AE5;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid #4D5AE5
+}
+.modal-form-submit:hover,
+.modal-form-submit:focus {
+    background-color: var(--accent-color);
+}
+
+
+
 
 /* <<<<< /Модальна форма >>>>> */
