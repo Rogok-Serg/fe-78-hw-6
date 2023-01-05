@@ -365,13 +365,62 @@
         </div>
     </footer>
     <!-- Модальне вікно -->
-    <div class="backdrop is-hidden" data-modal>
+    <div class="backdrop" data-modal>
         <div class="modal">
             <button type="button" class="modal-close-btn" data-modal-close>
                 <svg class="modal-clise-btn-icon" width="8" height="8">
                     <use href="./images/symbol-defs.svg#icon-close-black" ></use>
                 </svg>
             </button>
+            <form class="modal-form">
+                <p class="description-form">Leave your contacts and we will call you back</p>
+                <label for="user-name" class="modal-form-field">
+                    <span class="modal-form-input-desc">Name</span> 
+                </label>
+                    <input 
+                    id="user-name"
+                    type="text" 
+                    name="user-name" 
+                    class="modal-form-input" 
+                    required 
+                    pattern="[a-zA-Zа-яА-Я]+" 
+                    minlength="2">
+                
+                <label for="user-phone" class="modal-form-field">
+                    <span class="modal-form-input-desc">Phone</span> 
+                </label>
+                    <input 
+                    id="user-phone"
+                    type="tel" 
+                    name="user-phone" 
+                    class="modal-form-input" 
+                    required 
+                    pattern="[0-9]{3}-[0-9]{3}-[0-9]{2}-[0-9]{2}" 
+                    title="xxx-xxx-xx-xx">
+                
+                <label for="user-email" class="modal-form-field">
+                    <span class="modal-form-input-desc">Email</span> 
+                </label>
+                    <input 
+                    id="user-email"
+                    type="email" 
+                    name="user-email" 
+                    class="modal-form-input" 
+                    required
+                    pattern="[a-z@]">
+                
+                <label class="modal-form-field">
+                    <span class="modal-form-input-desc">Comment</span>
+                    <textarea 
+                    name="user-message"
+                    class="modal-form-message" 
+                    placeholder="Text input"
+                    ></textarea>
+                </label>
+                <input id="user-policy" type="checkbox" name="user-policy" class="modal-form-check">
+                <label for="user-policy" class="modal-form-check-desc">I accept the terms and conditions of the <a href="">Privacy Policy</a></label>
+                <button type="submit" class="modal-form-submit">Send</button>
+            </form>
         </div>
     </div>
     <script src="./js/modal.js"></script>
