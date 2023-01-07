@@ -360,8 +360,32 @@
                         </a>
                     </li>
                 </ul>
+                <li class="footer-form-list">
+                    <form class="footer-form">
+                        <p class="footer-form-title">Subscribe</p>
+                        <div class="footer-form-wrapper">
+                            <label for="footer-email" class="footer-form-field"
+                            ></label>
+                            <input 
+                            id="footer-email"
+                            type="email"
+                            class="footer-form-input"
+                            required
+                            placeholder="E-mail"
+                            pattern="[a-zA-Z@]"
+                            >
+                            <button type="submit" class="footer-form-submit">Subscribe
+                                <svg class="footer-btn-icon" width="24" height="20">
+                                    <use href="./images/symbol-defs.svg#icon-telegram"></use>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
+                </li>
+
                 </li>              
             </ul>
+            
         </div>
     </footer>
     <!-- Модальне вікно -->
@@ -433,7 +457,12 @@
                     ></textarea>
                 </label>
                 <input id="user-policy" type="checkbox" name="user-policy" class="modal-form-check">
-                <label for="user-policy" class="modal-form-check-desc">I accept the terms and conditions of the&nbsp;<a href="" class="modal-form-check-desc-link">Privacy Policy</a></label>
+                <label for="user-policy" class="modal-form-check-desc">
+                    <span class="modal-form-check-vector">
+                        <svg class="modal-form-check-img" width="10" height="8">
+                            <use href="./images/symbol-defs.svg#icon-vector"></use>
+                        </svg>
+                    </span>I accept the terms and conditions of the&nbsp;<a href="" class="modal-form-check-desc-link">Privacy Policy</a></label>
                 <button type="submit" class="modal-form-submit">Send</button>
             </form>
         </div>
