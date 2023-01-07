@@ -481,6 +481,7 @@ span {
 .footer-form-input {
     width: 260px;
     height: 40px;
+    padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
     background-color: #2E2F42;
@@ -527,6 +528,7 @@ span {
         background-color: var(--accent-color);
     }
     .footer-btn-icon {
+        
         fill: #FFFFFF;;
         margin-left: 16px;
     }
