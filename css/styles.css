@@ -505,7 +505,6 @@ span {
 }
 .footer-form-wrapper {
     display: flex;   
-    flex-direction: column;
 }
 .footer-form-submit {
     display: flex;
