@@ -479,7 +479,7 @@ span {
     margin-left: 80px;
 }
 .footer-form-input {
-    width: 260px;
+    width: 264px;
     height: 40px;
     padding-left: 16px;
     color: #FFFFFF;
@@ -508,7 +508,7 @@ span {
 }
 .footer-form-submit {
     display: flex;
-    width: 100%;
+    width: 165px;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -723,6 +723,7 @@ span {
 .modal-form-input {
     width: 100%;
     height: 40px;
+    background-color: #FCFCFC;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 38px;
@@ -765,6 +766,8 @@ span {
     height: 117px;
     padding: 8px 16px;
     resize: none;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
     transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-form-message:focus {
