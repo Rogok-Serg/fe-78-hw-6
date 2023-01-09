@@ -822,7 +822,7 @@ span {
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
-    fill: #F4F4FD;;
+    fill: #F4F4FD;
 
 }
 .modal-form-check {
@@ -840,8 +840,9 @@ span {
     background-color: #404BBF;
     border-color: #404BBF;
 }
+
 .modal-form-check:focus + .modal-form-check-desc > .modal-form-check-vector {
-    background-color: var(--accent-color);
+    border-color: #404BBF;
     
 }
 .modal-form-submit {
